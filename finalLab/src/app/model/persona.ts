@@ -6,4 +6,5 @@ export class Usuario {
     birthday: Date | any
     favColor: string | any
     gender: string | any
+    _id?: string
 }

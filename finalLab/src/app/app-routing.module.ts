@@ -4,9 +4,9 @@ import { FormComponent } from './components/form/form.component';
 import { ListaComponent } from './components/lista/lista.component';
 
 const routes: Routes = [
-  { path: '', component: FormComponent },
+  { path: '', component: ListaComponent },
   { path: 'nuevo-usuario', component: FormComponent },
-  { path: 'editar-usuario', component: ListaComponent },
+  { path: 'editar-usuario/:id', component: FormComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

@@ -26,7 +26,7 @@
                         <td>{{  usuario.birthday | date }}</td>
                         <td>{{ usuario.gender }}</td>
                         <td>{{ usuario.favColor }}</td>
-                        <td><i class="fas fa-edit text-primary" ></i></td>
+                        <td><i [routerLink]="['/editar-usuario', usuario._id]" class="fas fa-edit text-primary" ></i></td>
                         <td> <i (click)="eliminarUsuario(usuario._id)"  class="fas fa-trash text-danger"></i></td>
 
                     </tr>
