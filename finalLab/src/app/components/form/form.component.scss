@@ -1,4 +1,21 @@
-.text-danger {
+.container {
+    padding: 15px;
+    padding-bottom: 25px;
+    background-color: rgba(41, 41, 41, 0.403);
+    border-radius: 5px;
+
+
+    h3 {
+        color: white;
+        text-align: center;
+
+    }
+
+    button {
+        margin-bottom: 25px;
+    }
+}
+.text {
     color: white;
 
 }

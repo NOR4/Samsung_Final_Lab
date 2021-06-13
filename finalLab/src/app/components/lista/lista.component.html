@@ -3,7 +3,7 @@
         <div class="col-xs-12 col-sm-8 col-md-10">
             <h2>Lista de Usuarios</h2>
             <button class="btn btn-success float-end" [routerLink]="['/nuevo-usuario']" routerLinkActive="router-link-active" >Crear usuario</button>
-            <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3">
+            <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3 text-light">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -40,4 +40,3 @@
 
     </div>
 </div>
-<!-- <app-form [personaActual]="personaActual"></app-form> -->

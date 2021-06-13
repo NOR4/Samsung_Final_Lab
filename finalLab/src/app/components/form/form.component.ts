@@ -24,8 +24,8 @@ export class FormComponent implements OnInit {
     this.userForm = this.fb.group({
      nombre: [ '', [Validators.minLength(3), Validators.required]], 
      apellidos: ['',[ Validators.minLength(3), Validators.required]],
-     edad: ['',Validators.required],
-     dni: ['', Validators.required],
+     edad: ['', [Validators.required, this.edadValidator]],
+     dni: ['', [Validators.pattern('^[0-9]{8,8}[A-Za-z]$'), Validators.required]],
      birthday: ['', Validators.required],
      favColor: ['', [Validators.minLength(3), Validators.required]],
      gender: ['', Validators.required]
@@ -35,6 +35,18 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.esEditar()
+  }
+
+  edadValidator(formControl: { value: any; }) {
+    const value = formControl.value;
+    const max = 125;
+    const min = 0;
+    if (value >=0 && value <= 125) {
+      return null;
+    } else {
+      return { edadValidator: { max, min}};
+    }
+
   }
 
   newUser() {
@@ -59,7 +71,7 @@ export class FormComponent implements OnInit {
         console.log(error);
         this.userForm.reset();
       })
-      
+
     } else {
       //agregar usuario
       console.log(User);
