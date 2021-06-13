@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10">
+            <h2>Lista de Usuarios</h2>
+            <button class="btn btn-success float-end" [routerLink]="['/nuevo-usuario']" routerLinkActive="router-link-active" >Crear usuario</button>
+            <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">DNI</th>
+                        <th scope="col">Cumpleaños</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of listUsuarios ">
+                        <td scope="row">1</td>
+                        <td>{{ usuario.nombre }}</td>
+                        <td>{{ usuario.apellidos }}</td>
+                        <td>{{ usuario.edad }}</td>
+                        <td>{{ usuario.dni }}</td>
+                        <td>{{  usuario.birthday | date }}</td>
+                        <td>{{ usuario.gender }}</td>
+                        <td>{{ usuario.favColor }}</td>
+                        <td><i class="fas fa-edit text-primary" ></i></td>
+                        <td> <i (click)="eliminarUsuario(usuario._id)"  class="fas fa-trash text-danger"></i></td>
+
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <h5 *ngIf="listUsuarios.length == 0">No hay usuarios registrados.</h5>
+        </div>
+
+
+
+    </div>
+</div>
+<!-- <app-form [personaActual]="personaActual"></app-form> -->
