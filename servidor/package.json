@@ -4,7 +4,8 @@
   "description": "laboratori final",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node index.js"
   },
   "author": "C Mangas",
   "license": "ISC",
