@@ -7,7 +7,7 @@ import { Usuario } from '../model/persona';
   providedIn: 'root'
 })
 export class UsuariosService {
-  url = 'http://localhost:4000/api/usuarios/';
+  url = 'https://samsung-final-lab.vercel.app/api/usuarios/';
 
   constructor( private http: HttpClient) { }
 
