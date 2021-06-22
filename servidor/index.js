@@ -12,7 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/usuarios', require('./routes/usuario'));
 
+const port = process.env.PORT || 3000;
 
-app.listen(4000, ()=> {
-    console.log('Escuchando en puerto 4000');
+app.listen(port, ()=> {
+    console.log('Escuchando en puerto '+port );
 })
